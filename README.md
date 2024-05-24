@@ -39,4 +39,4 @@ curl -H "Content-Type: application/json" -X POST --data @data.json http://localh
 ### Request chatbot
 ```bash
 curl -X POST http://localhost:8868/chat -H "Content-Type: application/json" -d '{"input": "What is ID Docusign Envelope"}'
-```
+```# RAG
