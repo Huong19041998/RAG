@@ -1,0 +1,37 @@
+version: '3.3'
+
+services:
+  postgres:
+    build:
+      context: pgvector
+    container_name: pgvector_container
+    environment:
+      POSTGRES_PASSWORD: 19041998
+      POSTGRES_USER: postgres
+      POSTGRES_DB: my_database  # Đặt tên cơ sở dữ liệu bạn muốn tạo
+    ports:
+      - "5434:5432"
+
+  my_ocr_app:
+    build: .
+#      context: PaddleOCR2Pytorch
+    container_name: my_ocr_app
+    ports:
+      - "8868:8868"
+    depends_on:
+      - postgres
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: my_database  # Sử dụng cùng tên cơ sở dữ liệu
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 19041998
+      OpenAIKey: ""
+      rec_image_shape : "3,48,320"
+      det_yaml_path : "/app/PaddleOCR2Pytorch/configs/det/det_ppocr_v3.yml"
+      rec_yaml_path : "/app/PaddleOCR2Pytorch/configs/rec/PP-OCRv4/en_PP-OCRv4_rec.yml"
+      rec_char_dict_path : "/app/PaddleOCR2Pytorch/pytorchocr/utils/en_dict.txt"
+      # path model converter
+      rec_model_path : "/app/model/en_ptocr_v4_rec_infer.pth"
+      det_model_path : "/app/model/en_ptocr_v3_det_infer.pth"
+      cls_model_path : "/app/model/ch_ptocr_mobile_v2.0_cls_infer.pth"
