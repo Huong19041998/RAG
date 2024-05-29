@@ -15,7 +15,7 @@ project_folder/
 ```
 # Run 
 ### Copy model ocr  to model
-### Open docker-compose.yml paste OpenAIKey
+
 
 ### Build Docker 
 

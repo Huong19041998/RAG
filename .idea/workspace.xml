@@ -10,28 +10,17 @@
       <change afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/test.jpeg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pgvector/note_run_ocr.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pgvector/note_run_pg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.template" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Repo_Git.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.template" beforeDir="false" afterPath="$PROJECT_DIR$/.env.template" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ReadMe_Run.md" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/ReadMe_Run.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/pytorchocr/postprocess/db_postprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/pytorchocr/postprocess/db_postprocess.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/pytorchocr/utils/utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/pytorchocr/utils/utility.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/tools/infer/predict_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/tools/infer/predict_system.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pgvector" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pgvector" beforeDir="false" afterPath="$PROJECT_DIR$/pgvector" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pgvector/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/pgvector/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,14 +49,14 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/huongtruong/Documents/huongtruong_project/Repo_Git/PaddleOCR2Pytorch"
+    "last_opened_file_path": "/Users/huongtruong/Documents/huongtruong_project/Repo_Git"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/PaddleOCR2Pytorch" />
       <recent name="$PROJECT_DIR$/model" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
