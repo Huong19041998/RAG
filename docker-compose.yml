@@ -11,6 +11,8 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
     ports:
       - "5434:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
 
   my_ocr_app:
     build: .
@@ -33,3 +35,8 @@ services:
       rec_model_path: ${rec_model_path}
       det_model_path: ${det_model_path}
       cls_model_path: ${cls_model_path}
+    volumes:
+      - ./model:/app/model
+
+volumes:
+  pgdata:

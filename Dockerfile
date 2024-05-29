@@ -35,6 +35,6 @@ ENV PYTHONPATH "${PYTHONPATH}:/app:/app/PaddleOCR2Pytorch"
 
 COPY app.py .
 COPY util.py .
-COPY model /app/model
+#COPY model /app/model
 # CMD để khởi chạy Flask server
 CMD ["python", "app.py"]
