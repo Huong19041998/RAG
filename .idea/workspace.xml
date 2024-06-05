@@ -18,7 +18,6 @@
       <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/pytorchocr/postprocess/db_postprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/pytorchocr/postprocess/db_postprocess.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/pytorchocr/utils/utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/pytorchocr/utils/utility.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/tools/infer/predict_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/tools/infer/predict_system.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pgvector" beforeDir="false" afterPath="$PROJECT_DIR$/pgvector" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pgvector/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/pgvector/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/util.py" afterDir="false" />

@@ -76,6 +76,7 @@ def retrieve_nearest_embedding(query_embedding):
 
 
 def process_ocr_and_store(url,job_id):
+    url = url[0]
     logger.info(f"Processing OCR for URL: {url}, Job ID: {job_id}")
     redis_client.set(job_id, 'processing')
     try:
@@ -91,7 +92,7 @@ def process_ocr_and_store(url,job_id):
         embedding_text = []
         image_file_list = get_image_file_list_request(url)
         text_sys = TextSystem(args)
-        for img in image_file_list[0:2]:
+        for img in image_file_list:
             dt_boxes, rec_res = text_sys(img)
             result_string = " ".join(text for text, _ in rec_res)
             embedding = get_ada_embedding(result_string)
@@ -109,16 +110,27 @@ def process_ocr_and_store(url,job_id):
             if not cur.fetchone():
                 cur.execute("CREATE EXTENSION vector;")
 
-            cur.execute("""
-            CREATE TABLE IF NOT EXISTS items (
-                id UUID PRIMARY KEY,
+            # cur.execute("""
+            # CREATE TABLE IF NOT EXISTS items (
+            #     id UUID PRIMARY KEY,
+            #     embedding VECTOR(1536),
+            #     content TEXT
+            # );
+            # """)
+            cur.execute("""CREATE TABLE IF  NOT EXISTS items(
+                id UUID PRIMARY  KEY,
                 embedding VECTOR(1536),
-                content TEXT
+                content TEXT, 
+                name_pdf TEXT,
+                page_number INTEGER
             );
             """)
-            for v in embedding_text:
+
+            for index,v in enumerate(embedding_text):
                 _id = generate_uuid_v4()
-                cur.execute("INSERT INTO items (id, embedding, content) VALUES (%s, %s, %s);", (_id, v["embedding"], v["text"]))
+                cur.execute("INSERT INTO items (id, embedding, content, name_pdf, page_number) VALUES (%s, %s, %s, %s, %s);",
+                            (_id, v["embedding"], v["text"], url, str(index+1)))
+                # cur.execute("INSERT INTO items (id, embedding, content) VALUES (%s, %s, %s);", (_id, v["embedding"], v["text"]))
         conn.commit()
         conn.close()
     except Exception as e:
