@@ -3,6 +3,7 @@ import os
 import psycopg2
 import uuid
 import sys
+from dotenv import load_dotenv
 __dir__ = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(__dir__)
 sys.path.append(os.path.abspath(os.path.join(__dir__, '../..')))
@@ -11,6 +12,9 @@ from PaddleOCR2Pytorch.pytorchocr.utils.utility import get_image_file_list_reque
 from PaddleOCR2Pytorch.tools.infer.pytorchocr_utility import  parse_args
 from PaddleOCR2Pytorch.tools.infer.predict_system import TextSystem
 import redis
+import logging
+load_dotenv()
+
 def generate_uuid_v4():
     return str(uuid.uuid4())
 POSTGRES_HOST = os.getenv('POSTGRES_HOST', 'localhost')
@@ -18,6 +22,8 @@ POSTGRES_PORT = os.getenv('POSTGRES_PORT', '5432')
 POSTGRES_DB = os.getenv('POSTGRES_DB', 'postgres')
 POSTGRES_USER = os.getenv('POSTGRES_USER', 'postgres')
 POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD', 'password')
+redis_host = os.getenv('REDIS_HOST','redis' )
+redis_port = os.getenv('REDIS_PORT', '6379')
 OpenAIKey = os.getenv('OpenAIKey', None)
 rec_image_shape = os.getenv('rec_image_shape', None)
 det_yaml_path = os.getenv('det_yaml_path', None)
@@ -27,17 +33,14 @@ rec_model_path = os.getenv('rec_model_path', None)
 det_model_path = os.getenv('det_model_path', None)
 cls_model_path = os.getenv('cls_model_path', None)
 
+redis_client = redis.StrictRedis(host=redis_host, port=redis_port, decode_responses=True)
 
-import logging
+
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-redis_host = 'redis'
-redis_port = 6379
-redis_client = redis.StrictRedis(host=redis_host, port=redis_port, decode_responses=True)
 
-def log_function(text):
-    logger.info(f" This is an info message {str(text)}")
+
 
 def get_ada_embedding(text):
     openai.api_key = OpenAIKey
@@ -73,7 +76,6 @@ def retrieve_nearest_embedding(query_embedding):
 
 
 def process_ocr_and_store(url,job_id):
-    log_function(url)
     logger.info(f"Processing OCR for URL: {url}, Job ID: {job_id}")
     redis_client.set(job_id, 'processing')
     try:
