@@ -38,3 +38,4 @@ COPY util.py .
 #COPY model /app/model
 # CMD để khởi chạy Flask server
 CMD ["python", "app.py"]
+

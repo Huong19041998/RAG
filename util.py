@@ -13,10 +13,11 @@ from PaddleOCR2Pytorch.tools.infer.pytorchocr_utility import  parse_args
 from PaddleOCR2Pytorch.tools.infer.predict_system import TextSystem
 import redis
 import logging
+from rq import Queue, Worker, Connection
+from datetime import timedelta
 load_dotenv()
 
-def generate_uuid_v4():
-    return str(uuid.uuid4())
+
 POSTGRES_HOST = os.getenv('POSTGRES_HOST', 'localhost')
 POSTGRES_PORT = os.getenv('POSTGRES_PORT', '5432')
 POSTGRES_DB = os.getenv('POSTGRES_DB', 'postgres')
@@ -33,15 +34,15 @@ rec_model_path = os.getenv('rec_model_path', None)
 det_model_path = os.getenv('det_model_path', None)
 cls_model_path = os.getenv('cls_model_path', None)
 
-redis_client = redis.StrictRedis(host=redis_host, port=redis_port, decode_responses=True)
-
-
+redis_client = redis.StrictRedis(host=redis_host, port=redis_port) #, decode_responses=True
+queue_rd = Queue("process_ocr_and_store",connection=redis_client)
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-
+def generate_uuid_v4():
+    return str(uuid.uuid4())
 def get_ada_embedding(text):
     openai.api_key = OpenAIKey
     response = openai.Embedding.create(
@@ -53,14 +54,14 @@ def get_ada_embedding(text):
 
 
 def retrieve_nearest_embedding(query_embedding):
-    conn = psycopg2.connect(
+    conn_pg = psycopg2.connect(
         dbname=POSTGRES_DB,
         user=POSTGRES_USER,
         password=POSTGRES_PASSWORD,
         host=POSTGRES_HOST,
         port=POSTGRES_PORT
     )
-    with conn.cursor() as cur:
+    with conn_pg.cursor() as cur:
         query_embedding_str = '[' + ', '.join(map(str, query_embedding)) + ']'
         cur.execute("""
             SELECT id, content, embedding <=> %s::vector AS distance
@@ -70,14 +71,22 @@ def retrieve_nearest_embedding(query_embedding):
         """, (query_embedding_str,))
         result = cur.fetchone()
 
-    conn.commit()
-    conn.close()
+    conn_pg.commit()
+    conn_pg.close()
     return result
 
 
 def process_ocr_and_store(url,job_id):
-    url = url[0]
-    logger.info(f"Processing OCR for URL: {url}, Job ID: {job_id}")
+    url = url
+    logger.info(f"___ Processing OCR for URL: {url}, Job ID: {job_id}")
+
+    conn_pg = psycopg2.connect(
+        dbname=POSTGRES_DB,
+        user=POSTGRES_USER,
+        password=POSTGRES_PASSWORD,
+        host=POSTGRES_HOST,
+        port=POSTGRES_PORT
+    )
     redis_client.set(job_id, 'processing')
     try:
         args = parse_args()
@@ -92,31 +101,17 @@ def process_ocr_and_store(url,job_id):
         embedding_text = []
         image_file_list = get_image_file_list_request(url)
         text_sys = TextSystem(args)
-        for img in image_file_list:
+        for img in image_file_list[0:2]:
             dt_boxes, rec_res = text_sys(img)
             result_string = " ".join(text for text, _ in rec_res)
             embedding = get_ada_embedding(result_string)
             embedding_text.append({"embedding": embedding, "text": result_string})
 
-        conn = psycopg2.connect(
-            dbname=POSTGRES_DB,
-            user=POSTGRES_USER,
-            password=POSTGRES_PASSWORD,
-            host=POSTGRES_HOST,
-            port=POSTGRES_PORT
-        )
-        with conn.cursor() as cur:
+        with conn_pg.cursor() as cur:
             cur.execute("SELECT * FROM pg_extension WHERE extname = 'vector';")
             if not cur.fetchone():
                 cur.execute("CREATE EXTENSION vector;")
 
-            # cur.execute("""
-            # CREATE TABLE IF NOT EXISTS items (
-            #     id UUID PRIMARY KEY,
-            #     embedding VECTOR(1536),
-            #     content TEXT
-            # );
-            # """)
             cur.execute("""CREATE TABLE IF  NOT EXISTS items(
                 id UUID PRIMARY  KEY,
                 embedding VECTOR(1536),
@@ -131,10 +126,37 @@ def process_ocr_and_store(url,job_id):
                 cur.execute("INSERT INTO items (id, embedding, content, name_pdf, page_number) VALUES (%s, %s, %s, %s, %s);",
                             (_id, v["embedding"], v["text"], url, str(index+1)))
                 # cur.execute("INSERT INTO items (id, embedding, content) VALUES (%s, %s, %s);", (_id, v["embedding"], v["text"]))
-        conn.commit()
-        conn.close()
+        conn_pg.commit()
+        conn_pg.close()
+        logger.info(f"___ Done Processing OCR for URL: {url}, Job ID: {job_id}")
     except Exception as e:
         logger.error(f"Error during OCR processing: {e}")
     finally:
-        conn.close()
-        redis_client.set(job_id, 'done')
+        conn_pg.close()
+        # redis_client.set(job_id, 'done')
+        redis_client.setex(job_id, timedelta(days=10), 'done')  # timedelta(days=1)
+
+
+def run_worker():
+    with Connection(redis_client):
+        worker = Worker([queue_rd])
+        worker.work()
+
+# if __name__ == '__main__':
+#     import multiprocessing
+#     num_workers = 4  # Số lượng worker bạn muốn chạy đồng thời
+#     processes = []
+#     for _ in range(num_workers):
+#         p = multiprocessing.Process(target=run_worker, args=(queue_rd,))
+#         p.start()
+#         processes.append(p)
+#
+#     for p in processes:
+#         p.join()
+    # from concurrent.futures import ThreadPoolExecutor
+    #
+    # num_worker_threads = 4
+    # with ThreadPoolExecutor(max_workers=num_worker_threads) as executor:
+    #     for _ in range(num_worker_threads):
+    #         executor.submit(run_worker(queue_rd))
+#     run_worker()
