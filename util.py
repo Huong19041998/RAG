@@ -101,7 +101,7 @@ def process_ocr_and_store(url,job_id):
         embedding_text = []
         image_file_list = get_image_file_list_request(url)
         text_sys = TextSystem(args)
-        for img in image_file_list[0:2]:
+        for img in image_file_list:
             dt_boxes, rec_res = text_sys(img)
             result_string = " ".join(text for text, _ in rec_res)
             embedding = get_ada_embedding(result_string)
