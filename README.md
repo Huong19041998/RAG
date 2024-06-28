@@ -45,4 +45,3 @@ curl -X POST http://localhost:8868/chat -H "Content-Type: application/json" -d '
 ```bash
 curl -X GET http://localhost:8868/status/<job_id>
 ```bash
-s
