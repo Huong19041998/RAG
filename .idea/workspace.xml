@@ -8,7 +8,6 @@
       <change afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/paddle2pytorch.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pgvector/note_run_ocr.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pgvector/note_run_pg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/configs/rec/PP-OCRv4/en_PP-OCRv4_rec.yml" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/configs/rec/PP-OCRv4/en_PP-OCRv4_rec.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_mobile_v2.0_cls_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_mobile_v2.0_cls_converter.py" afterDir="false" />
@@ -152,7 +151,8 @@
       <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/pytorchocr/postprocess/db_postprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/pytorchocr/postprocess/db_postprocess.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/tools/infer/predict_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/tools/infer/predict_system.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pgvector" beforeDir="false" afterPath="$PROJECT_DIR$/pgvector" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pgvector/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/pgvector/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pgvector/.github/workflows/build.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pgvector/.gitignore" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
