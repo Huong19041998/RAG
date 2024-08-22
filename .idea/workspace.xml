@@ -4,156 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd02eb42-875a-4894-9e19-bc812a215ed6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/paddle2pytorch.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pgvector/note_run_ocr.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pgvector/note_run_pg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/configs/rec/PP-OCRv4/en_PP-OCRv4_rec.yml" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/configs/rec/PP-OCRv4/en_PP-OCRv4_rec.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_mobile_v2.0_cls_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_mobile_v2.0_cls_converter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_mobile_v2.0_det_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_mobile_v2.0_rec_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_server_v2.0_det_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_server_v2.0_rec_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_v2_det_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_v2_rec_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_v3_det_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_v3_det_converter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_v3_rec_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_v3_rec_converter_nodistill.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_v4_det_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_v4_det_converter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_v4_det_converter_from_pytorchocr.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/convert_det.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_v4_det_server_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_v4_rec_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_v4_rec_converter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ch_ppocr_v4_rec_server_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/convert_rec.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/det_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/det_fcenet_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/e2e_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/layoutxlm_re_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/layoutxlm_ser_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/multilingual_mobile_v2.0_rec_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/multilingual_ppocr_v3_rec_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/multilingual_ppocr_v3_rec_converter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ppstructure_table_det_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ppstructure_table_rec_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/ppstructure_table_structure_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/rec_can_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/rec_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/rec_nrtr_mtb_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/rec_sar_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/rec_svtr_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/rec_vitstr_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/sr_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/srn_converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/converter/static2dygraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/attention_grucell.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/attention_head.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/common.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/conv.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/diff.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/fc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/gelu.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/gru_cell.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/hard_swish.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/hs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/layernorm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/lstm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/pp_ocr.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/pp_rec_resnet_fpn.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/pp_rec_srn_head.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/pp_self_attention.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/pp_table_att_head.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/pp_table_fpn.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/pp_table_mobilenet_v3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/pt_rec_resnet_fpn.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/pt_rec_srn_head.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/pt_self_attention.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/pt_table_att_head.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/pt_table_fpn.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/pt_table_mobilenet_v3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/rec_resnet_fpn.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/rec_srn.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/rec_srn_head.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/table_att_head.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/table_det.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/table_mobile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/misc/table_mobilenet_v3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/examples/data/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/examples/data/example-table.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/examples/data/paper-image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/layout/ptppyolov2/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/layout/ptppyolov2/ppyolo_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/layout/ptppyolov2/ppyolov2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/layout/ptppyolov2/ppyolov2_base.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/layout/ptppyolov2/ppyolov2_darknet.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/layout/ptppyolov2/ppyolov2_layout.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/layout/ptppyolov2/ppyolov2_pt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/layout/ptppyolov2/ppyolov2_resnet.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/layout/ptppyolov2/ppyolov2_yolo_fpn.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/layout/ptppyolov2/ppyolov2_yolo_head.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/layout/ptppyolov2/pt_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/layout/ptppyolov2/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/output/table/table.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/predict_system.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/table/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/table/matcher.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/table/predict_structure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/table/predict_table.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/table/tablepyxl/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/table/tablepyxl/style.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/table/tablepyxl/tablepyxl.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/utility.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/README_en.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/README_en_pp.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/README_pp.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/images/id_cards/id1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/images/id_cards/id2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/images/id_cards/id3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/images/id_cards/id4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/images/id_cards/id5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/images/id_cards/id6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/images/id_cards/id7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/images/input/zh_val_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/images/input/zh_val_21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/images/input/zh_val_40.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/images/input/zh_val_42.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/images/result_re/zh_val_21_re.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/images/result_re/zh_val_40_re.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/images/result_ser/zh_val_0_ser.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/images/result_ser/zh_val_42_ser.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/infer_ser_e2e.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/infer_ser_re_e2e.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/labels/labels_ser.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/output/ser_e2e/zh_val_0_ser.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/output/ser_e2e/zh_val_42_ser.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/output/ser_re_e2e/zh_val_21_re.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/output/ser_re_e2e/zh_val_40_re.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/pytorchnlp/data/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/pytorchnlp/data/vocab.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/pytorchnlp/transformers/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/pytorchnlp/transformers/bert/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/pytorchnlp/transformers/bert/tokenizer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/pytorchnlp/transformers/layoutlm/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/pytorchnlp/transformers/layoutlm/modeling.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/pytorchnlp/transformers/layoutlm/tokenizer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/pytorchnlp/transformers/layoutxlm/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/pytorchnlp/transformers/layoutxlm/modeling.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/pytorchnlp/transformers/layoutxlm/network.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/pytorchnlp/transformers/layoutxlm/tokenizer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/pytorchnlp/transformers/layoutxlm/visual_backbone.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/pytorchnlp/transformers/layoutxlm/visual_backbone.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/pytorchnlp/transformers/model_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/pytorchnlp/transformers/tokenizer_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/pytorchnlp/transformers/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/ptstructure/vqa/vqa_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/pytorchocr/base_ocr_v20.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/pytorchocr/base_ocr_v20.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/pytorchocr/modeling/heads/rec_multi_head.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/pytorchocr/modeling/heads/rec_multi_head.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/pytorchocr/postprocess/db_postprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/pytorchocr/postprocess/db_postprocess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PaddleOCR2Pytorch/tools/infer/predict_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/PaddleOCR2Pytorch/tools/infer/predict_system.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pgvector" beforeDir="false" afterPath="$PROJECT_DIR$/pgvector" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pgvector/.github/workflows/build.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pgvector/.gitignore" beforeDir="false" />
-    </list>
+    <list default="true" id="fd02eb42-875a-4894-9e19-bc812a215ed6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -180,13 +31,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/huongtruong/Documents/huongtruong_project/Repo_Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/huongtruong/Documents/huongtruong_project/Repo_Git/file "
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -258,21 +109,5 @@
       <updated>1715822851764</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PaddleOCR2Pytorch/main.py</url>
-          <line>43</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PaddleOCR2Pytorch/main.py</url>
-          <line>42</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
