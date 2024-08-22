@@ -1,7 +1,0 @@
-[submodule "PaddleOCR2Pytorch"]
-    path = PaddleOCR2Pytorch
-    url = https://github.com/Huong19041998/PaddleOCR2Pytorch.git
-
-[submodule "pgvector"]
-    path = pgvector
-    url = https://github.com/Huong19041998/pgvector.git
