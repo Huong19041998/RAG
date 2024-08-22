@@ -27,7 +27,7 @@ docker-compose up -d
 ### Request OCR and Insert Data to DB
 #### Images 
 ```bash
-curl -H "Content-Type:application/json" -X POST --data "{\"url\": [\"url_img\"]}" http://localhost:8868/OCR
+curl -H "Content-Type:application/json" -X POST --data "{\"url\": [\"https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg\"]}" http://localhost:8868/OCR
 
 ```
 #### 

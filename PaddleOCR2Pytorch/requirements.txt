@@ -7,3 +7,11 @@ torch
 torchvision
 flask
 openai
+psycopg2
+redis
+rq
+python-dotenv
+requests
+six
+scikit-image
+pyyaml

@@ -77,9 +77,7 @@ def retrieve_nearest_embedding(query_embedding):
 
 
 def process_ocr_and_store(url,job_id):
-    url = url
     logger.info(f"___ Processing OCR for URL: {url}, Job ID: {job_id}")
-
     conn_pg = psycopg2.connect(
         dbname=POSTGRES_DB,
         user=POSTGRES_USER,

@@ -2,6 +2,10 @@ import os
 import imghdr
 import cv2
 import logging
+import requests
+from PIL import Image
+import numpy as np
+from io import BytesIO
 
 def get_image_file_list(img_file):
     imgs_lists = []
@@ -20,6 +24,28 @@ def get_image_file_list(img_file):
         raise Exception("not found any img file in {}".format(img_file))
     return imgs_lists
 
+
+
+
+
+def get_image_file_list_request(url_list):
+
+    image_array_list = []
+    for url in url_list:
+        try:
+
+            response = requests.get(url)
+            response.raise_for_status()
+            img = Image.open(BytesIO(response.content)).convert(
+                'RGB')
+            img_array = np.array(img)
+
+            image_array_list.append(img_array)
+
+        except Exception as e:
+            print(f"Unable to load image from {url}: {e}")
+
+    return image_array_list
 
 def check_and_read_gif(img_path):
     if os.path.basename(img_path)[-3:] in ['gif', 'GIF']:
