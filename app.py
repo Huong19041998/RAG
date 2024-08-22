@@ -17,7 +17,8 @@ OpenAIKey = os.getenv('OpenAIKey', None)
 @app.route('/OCR', methods=['POST'])
 def OCR():
     response = request.get_json()
-    url = response['url'][0]
+    print("response",response['url'])
+    url = response['url']
     job_id = generate_uuid_v4()
     redis_client.set(job_id, 'queued')
     redis_client.setex(job_id, 600 , 'queued') #timedelta(days=1)
