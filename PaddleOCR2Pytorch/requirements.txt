@@ -5,3 +5,5 @@ pyclipper
 opencv-python <= 4.2.0.32
 torch
 torchvision
+flask
+openai
