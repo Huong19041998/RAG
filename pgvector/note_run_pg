@@ -1,0 +1,14 @@
+1.  docker build --build-arg PG_MAJOR=16 -t myuser/pgvector .
+2.  docker run -d --name pgvector_container -p 5432:5432 -e POSTGRES_PASSWORD=19041998 myuser/pgvector
+3. Xác nhận container đang chạy:
+docker ps
+4. Kết nối vào container:
+ docker exec -it pgvector_container psql -h localhost -p 5432 -U postgres -d my_database
+
+5. thoát
+postgres-# \q
+root@04afd01b4a51:/# exit
+
+ docker stop pgvector_container
+
+

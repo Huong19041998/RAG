@@ -1,0 +1,24 @@
+
+docker build -t my_ocr_app .
+ docker run  --name my_ocr_app_container -p 8868:8868 my_ocr_app
+ #
+request img
+ base64_image=$(base64 -i  /Users/huongtruong/Documents/huongtruong_project/Repo_Git/img/img.png)
+curl -H "Content-Type:application/json" -X POST --data "{\"url\": [\"$base64_image\"]}" http://localhost:8868/OCR
+
+
+PDF #
+request pdf
+
+curl -H "Content-Type:application/json" -X POST --data "{\"url\": [\"https://arxiv.org/pdf/2403.11703v1\"]}" http://localhost:8868/OCR
+###
+base64_pdf=$(base64 -i  /Users/huongtruong/Documents/huongtruong_project/Repo_Git/PaddleOCR2Pytorch/t.pdf)
+echo "{\"url\": [\"$base64_pdf\"]}" > data.json
+curl -H "Content-Type: application/json" -X POST --data @data.json http://localhost:8868/OCR
+####
+chatbot
+curl -X POST http://localhost:8868/chat -H "Content-Type: application/json" -d '{"input": "What is ID Docusign Envelope"}'
+
+
+#### kiểm tra availabel
+df -h /
